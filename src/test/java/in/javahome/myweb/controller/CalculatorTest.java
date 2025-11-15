@@ -1,14 +1,13 @@
-package in.javahome.myweb.controller;
+package in.instagram.myweb.controller;
 
-import junit.framework.Assert;
-import junit.framework.TestCase;
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
 
-public class CalculatorTest extends TestCase {
-	Calculator cal = new Calculator();
-	public void testAdd(){
-		Assert.assertEquals(cal.add(10, 20), 30);
-	}
-	public void testMultiply(){
-		Assert.assertEquals(cal.multiply(10, 20), 200);
-	}
+public class InstagramControllerTest {
+
+    @Test
+    public void testWelcomeMessage() {
+        InstagramController ic = new InstagramController();
+        assertEquals("Welcome to Instagram Clone!", ic.welcomeMessage());
+    }
 }
